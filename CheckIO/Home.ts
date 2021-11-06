@@ -37,3 +37,12 @@ assert.equal(nearestValue([4, 7, 10, 11, 12, 17], 0), 4);
 assert.equal(nearestValue([4, 7, 10, 11, 12, 17], 100), 17);
 assert.equal(nearestValue([5, 10, 8, 12, 89, 100], 7), 8);
 assert.equal(nearestValue([-1, 2, 3], 0), -1); */
+
+//-----
+/* function easyUnpack(values: any[]): any[] {
+    // your code here
+    return [values[0], values[2], values[values.length - 2]];
+}
+assert.deepEqual(easyUnpack([1, 2, 3, 4, 5, 6, 7, 9]), [1, 3, 7]);
+assert.deepEqual(easyUnpack([1, 1, 1, 1]), [1, 1, 1]);
+assert.deepEqual(easyUnpack([6, 3, 7]), [6, 7, 3]); */

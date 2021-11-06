@@ -7,9 +7,18 @@ assert.deepEqual(replaceFirst([1]), [1]);
 assert.deepEqual(replaceFirst([]), []);  */
 
 //------
-function correctSentence(text: string): string {
+/* function correctSentence(text: string): string {
     return text[0].toUpperCase() + text.slice(1) + (text.slice(-1) == '.' ? '' : '.');
  }
 assert.equal(correctSentence('greetings, friends'), 'Greetings, friends.');
 assert.equal(correctSentence('Greetings, friends'), 'Greetings, friends.');
-assert.equal(correctSentence('Greetings, friends.'), 'Greetings, friends.');
+assert.equal(correctSentence('Greetings, friends.'), 'Greetings, friends.'); */
+
+//-----
+/* function isAcceptablePassword(password: string): boolean {
+    // your code here
+    return password.length > 6;
+}
+assert.equal(isAcceptablePassword('short'), false);
+assert.equal(isAcceptablePassword('muchlonger'), true);
+assert.equal(isAcceptablePassword('ashort'), false); */

@@ -6,3 +6,11 @@
       }
       return newString;
   }
+
+// Double Char
+export function doubleChar(str: string): string{
+    return str
+    .split('')
+    .map(c => c.repeat(2))
+    .join('');
+  }

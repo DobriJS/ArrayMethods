@@ -8,9 +8,14 @@
   }
 
 // Double Char
-export function doubleChar(str: string): string{
+ function doubleChar(str: string): string{
     return str
     .split('')
     .map(c => c.repeat(2))
     .join('');
+  }
+
+// Can we divide it?
+  function isDivideBy(number: number, a: number, b: number): boolean {
+    return !(number % a || number % b);
   }

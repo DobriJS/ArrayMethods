@@ -19,3 +19,8 @@
   function isDivideBy(number: number, a: number, b: number): boolean {
     return !(number % a || number % b);
   }
+
+// Simple Fun #1: Seats in Theater
+function seatsInTheater(nCols: number, nRows: number, col: number, row: number) {
+  return (nCols-col+1) * (nRows - row);
+}

@@ -24,3 +24,9 @@
 function seatsInTheater(nCols: number, nRows: number, col: number, row: number) {
   return (nCols-col+1) * (nRows - row);
 }
+
+// Keep Hydrated!
+function litres(time: number): number {
+  const waterDrinkedByAlexInHour = 0.5;
+  return Math.floor(waterDrinkedByAlexInHour * time);
+}

@@ -46,3 +46,19 @@ assert.equal(nearestValue([-1, 2, 3], 0), -1); */
 assert.deepEqual(easyUnpack([1, 2, 3, 4, 5, 6, 7, 9]), [1, 3, 7]);
 assert.deepEqual(easyUnpack([1, 1, 1, 1]), [1, 1, 1]);
 assert.deepEqual(easyUnpack([6, 3, 7]), [6, 7, 3]); */
+
+//-----
+interface Stock {
+    name: string,
+    price: number,
+};
+function biggerPrice(limit: number, data: Stock[]): Stock[] {
+     let output = [...data].sort((a,b) => b.price - a.price).splice(0, limit);
+    return output;
+}
+console.log(biggerPrice(2, [
+    {"name": "bread", "price": 100},
+    {"name": "wine", "price": 138},
+    {"name": "meat", "price": 15},
+    {"name": "water", "price": 1}
+]))

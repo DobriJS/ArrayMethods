@@ -52,7 +52,7 @@ interface Stock {
     name: string,
     price: number,
 };
-function biggerPrice(limit: number, data: Stock[]): Stock[] {
+/* function biggerPrice(limit: number, data: Stock[]): Stock[] {
      let output = [...data].sort((a,b) => b.price - a.price).splice(0, limit);
     return output;
 }
@@ -61,4 +61,19 @@ console.log(biggerPrice(2, [
     {"name": "wine", "price": 138},
     {"name": "meat", "price": 15},
     {"name": "water", "price": 1}
-]))
+])); */
+
+//------
+function popularWords(text: string, words: string[]) {
+    const poplsWords = {};
+   const strArr = text.toLowerCase().split(/\s+/);
+   for (let word of words) {
+     poplsWords[word] = strArr.filter(x => x === word).length;
+   }
+   return poplsWords;
+}
+console.log(popularWords(`
+When I was One
+I had just begun
+When I was Two
+I was nearly new`, ['i', 'was', 'three', 'near']))

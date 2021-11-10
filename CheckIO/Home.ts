@@ -87,15 +87,15 @@ I was nearly new`, ['i', 'was', 'three', 'near'])) */
 splitList([1, 2, 3, 4, 5, 6])  // [[1, 2, 3], [4, 5, 6]] */
 
 //-----
-function nonUniqueElements(data: number[]): number[] {
+/* function nonUniqueElements(data: number[]): number[] {
     return data.filter(element => {
          return data.indexOf(element) !== data.lastIndexOf(element);
     });
 }
-console.log(nonUniqueElements([1, 2, 3, 1, 3])) // [1, 3, 1, 3]
+console.log(nonUniqueElements([1, 2, 3, 1, 3])) // [1, 3, 1, 3] */
 
 //-----
-function countDigits(text: string): number {
+/* function countDigits(text: string): number {
     let digits = 0;
    for (let char of text){
        if(/[0-9]/.test(char)){
@@ -104,4 +104,14 @@ function countDigits(text: string): number {
    }
    return digits;
 }
-countDigits('who is 1st here') // 1
+countDigits('who is 1st here') // 1 */
+
+//-----
+function splitPairs(text: string): string[] {
+    let a = text.length %2 != 0 ? text + "_" : text;
+      let arr = [];
+      for ( let i = 0; i < a.length; i += 2)
+          arr[i/2] = a.slice(i,i+2);
+      return arr;
+  }
+  splitPairs('abcd') // ['ab', 'cd']

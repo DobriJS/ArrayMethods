@@ -48,10 +48,10 @@ assert.deepEqual(easyUnpack([1, 1, 1, 1]), [1, 1, 1]);
 assert.deepEqual(easyUnpack([6, 3, 7]), [6, 7, 3]); */
 
 //-----
-interface Stock {
+/* interface Stock {
     name: string,
     price: number,
-};
+}; */
 /* function biggerPrice(limit: number, data: Stock[]): Stock[] {
      let output = [...data].sort((a,b) => b.price - a.price).splice(0, limit);
     return output;
@@ -64,7 +64,7 @@ console.log(biggerPrice(2, [
 ])); */
 
 //------
-function popularWords(text: string, words: string[]) {
+/* function popularWords(text: string, words: string[]) {
     const poplsWords = {};
    const strArr = text.toLowerCase().split(/\s+/);
    for (let word of words) {
@@ -76,4 +76,12 @@ console.log(popularWords(`
 When I was One
 I had just begun
 When I was Two
-I was nearly new`, ['i', 'was', 'three', 'near']))
+I was nearly new`, ['i', 'was', 'three', 'near'])) */
+
+//------
+function splitList(values:number[]):number[][]{
+    const splitArr = [...values];
+    const fixedVal = Number((values.length / 2).toFixed(0));
+    return [splitArr.slice(0,fixedVal), splitArr.slice(fixedVal)];
+}
+splitList([1, 2, 3, 4, 5, 6])  // [[1, 2, 3], [4, 5, 6]]

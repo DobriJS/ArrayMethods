@@ -107,11 +107,17 @@ console.log(nonUniqueElements([1, 2, 3, 1, 3])) // [1, 3, 1, 3] */
 countDigits('who is 1st here') // 1 */
 
 //-----
-function splitPairs(text: string): string[] {
+/* function splitPairs(text: string): string[] {
     let a = text.length %2 != 0 ? text + "_" : text;
       let arr = [];
       for ( let i = 0; i < a.length; i += 2)
           arr[i/2] = a.slice(i,i+2);
       return arr;
   }
-  splitPairs('abcd') // ['ab', 'cd']
+  splitPairs('abcd') // ['ab', 'cd'] */
+
+//-----
+function betweenMarkers(line: string, left: string, right: string): string {
+    return line.slice(line.indexOf(left) + 1, line.indexOf(right));
+  }
+  betweenMarkers('What is >apple<', '>', '<') // 'apple'

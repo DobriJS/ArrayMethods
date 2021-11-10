@@ -79,9 +79,17 @@ When I was Two
 I was nearly new`, ['i', 'was', 'three', 'near'])) */
 
 //------
-function splitList(values:number[]):number[][]{
+/* function splitList(values:number[]):number[][]{
     const splitArr = [...values];
     const fixedVal = Number((values.length / 2).toFixed(0));
     return [splitArr.slice(0,fixedVal), splitArr.slice(fixedVal)];
 }
-splitList([1, 2, 3, 4, 5, 6])  // [[1, 2, 3], [4, 5, 6]]
+splitList([1, 2, 3, 4, 5, 6])  // [[1, 2, 3], [4, 5, 6]] */
+
+//-----
+function nonUniqueElements(data: number[]): number[] {
+    return data.filter(element => {
+         return data.indexOf(element) !== data.lastIndexOf(element);
+    });
+}
+console.log(nonUniqueElements([1, 2, 3, 1, 3])) // [1, 3, 1, 3]

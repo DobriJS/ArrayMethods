@@ -93,3 +93,15 @@ function nonUniqueElements(data: number[]): number[] {
     });
 }
 console.log(nonUniqueElements([1, 2, 3, 1, 3])) // [1, 3, 1, 3]
+
+//-----
+function countDigits(text: string): number {
+    let digits = 0;
+   for (let char of text){
+       if(/[0-9]/.test(char)){
+           digits++
+       }
+   }
+   return digits;
+}
+countDigits('who is 1st here') // 1

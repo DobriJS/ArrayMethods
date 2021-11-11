@@ -30,3 +30,8 @@ function litres(time: number): number {
   const waterDrinkedByAlexInHour = 0.5;
   return Math.floor(waterDrinkedByAlexInHour * time);
 }
+
+// Parse nice int from char problem
+function get_age(age: string): number {
+  return parseInt(age)
+}

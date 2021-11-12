@@ -7,3 +7,8 @@ function descendingOrder(n: number): number {
 function testit(a: number, b: number): number {
   return a | b ;
 }
+
+// Sum of odd numbers
+function rowSumOddNumbers(n: number) {
+  return Math.pow(n, 3)
+}

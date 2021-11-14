@@ -117,7 +117,7 @@ countDigits('who is 1st here') // 1 */
   splitPairs('abcd') // ['ab', 'cd'] */
 
 //-----
-function betweenMarkers(line: string, left: string, right: string): string {
+/* function betweenMarkers(line: string, left: string, right: string): string {
     return line.slice(line.indexOf(left) + 1, line.indexOf(right));
   }
-  betweenMarkers('What is >apple<', '>', '<') // 'apple'
+  betweenMarkers('What is >apple<', '>', '<') // 'apple' */

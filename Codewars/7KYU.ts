@@ -16,3 +16,8 @@ function rowSumOddNumbers(n: number) {
 // Invite more women
 const inviteMoreWomen = (l: number[]): boolean => l.reduce((acc,el)=> acc + el, 0) > 0;
 inviteMoreWomen([1, -1, 1, -1]);
+
+// Minimum value
+const minValue = (values: number[]): number => {
+  return Number.parseInt(values.filter((num, index) => values.indexOf(num) == index).sort().join(""));
+};

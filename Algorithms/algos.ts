@@ -4,3 +4,13 @@ const absoluteValueSumMinimization = (a: number[]): number => {
 }
 
 console.log(absoluteValueSumMinimization([2,4,7]));
+
+// -----
+const add = (...param1: number[]): number => {
+    let total = 0;
+    param1.forEach((num) => {
+        total += num;
+    });
+    return total;
+}
+console.log(add(1,2,3,4,5));

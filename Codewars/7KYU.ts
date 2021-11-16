@@ -1,4 +1,4 @@
-// Descending Order
+/* // Descending Order
 function descendingOrder(n: number): number {
     return parseInt(n.toString().split('').sort().reverse().join(''));
   }
@@ -20,4 +20,19 @@ inviteMoreWomen([1, -1, 1, -1]);
 // Minimum value
 const minValue = (values: number[]): number => {
   return Number.parseInt(values.filter((num, index) => values.indexOf(num) == index).sort().join(""));
-};
+}; */
+
+// Fix string case
+function solve(s: string) {
+  let countUpper = 0;
+  let countLower = 0;
+  for (let char of s.split('')) {
+    if (char === char.toUpperCase()) {
+      countUpper++;
+    } else {
+      countLower++;
+    }
+  }
+  return countUpper > countLower ? s.toUpperCase() : s.toLowerCase();
+}
+console.log(solve("coDe"));

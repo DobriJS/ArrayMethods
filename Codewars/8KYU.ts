@@ -1,4 +1,4 @@
-// Reversed Strings
+/* // Reversed Strings
  function solution(str: string): string {
     let newString = "";
       for (let i = str.length - 1; i >= 0; i--) {
@@ -34,4 +34,12 @@ function litres(time: number): number {
 // Parse nice int from char problem
 function get_age(age: string): number {
   return parseInt(age)
+} */
+
+// Beginner Series #1 School Paperworks
+function paperwork(n: number, m :number): number{
+  if (n < 0 || m < 0) {
+    return 0;
+  }
+  return n * m;
 }

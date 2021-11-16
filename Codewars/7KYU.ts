@@ -36,3 +36,8 @@ function solve(s: string) {
   return countUpper > countLower ? s.toUpperCase() : s.toLowerCase();
 }
 console.log(solve("coDe"));
+
+// Shrotest Word
+function findShort(s: string): number {
+  return Math.min(...s.split(" ").map((w) => w.length));
+}

@@ -34,8 +34,20 @@ console.log(add(1,2,3,4,5)); */
 console.log(addBorder(['abc', 'ded'])); */
 
 //------
-function addTwoDigits(n: any): number {
+/* function addTwoDigits(n: any): number {
     const nums = n.toString().split('');
     return parseInt(nums[0] + parseInt(nums[1]));
 }
-console.log(addTwoDigits(29));
+console.log(addTwoDigits(29)); */
+
+//-----
+function adjacentElementsProduct(inputArray: number[]): number {
+    let largestProduct = inputArray[0] * inputArray[1];
+
+    for(let i = 1; i < inputArray.length - 1; i++) {
+        const product = inputArray[i] * inputArray[i + 1];
+        largestProduct = largestProduct < product ? product : largestProduct;
+        }
+        return largestProduct;
+}
+console.log(adjacentElementsProduct([3,6,-2,-5,7,3]));

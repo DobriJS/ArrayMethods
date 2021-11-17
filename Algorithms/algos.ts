@@ -16,7 +16,7 @@ console.log(absoluteValueSumMinimization([2,4,7])); */
 console.log(add(1,2,3,4,5)); */
 
 // ----
-function addBorder(picture: string[]): any {
+/* function addBorder(picture: string[]): any {
     const lengthOfWall = picture[0].length + 2;
     let wall = '';
 
@@ -31,4 +31,11 @@ function addBorder(picture: string[]): any {
     }
     return picture;
 }
-console.log(addBorder(['abc', 'ded']));
+console.log(addBorder(['abc', 'ded'])); */
+
+//------
+function addTwoDigits(n: any): number {
+    const nums = n.toString().split('');
+    return parseInt(nums[0] + parseInt(nums[1]));
+}
+console.log(addTwoDigits(29));

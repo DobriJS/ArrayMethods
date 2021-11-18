@@ -41,7 +41,7 @@ console.log(addBorder(['abc', 'ded'])); */
 console.log(addTwoDigits(29)); */
 
 //-----
-function adjacentElementsProduct(inputArray: number[]): number {
+/* function adjacentElementsProduct(inputArray: number[]): number {
     let largestProduct = inputArray[0] * inputArray[1];
 
     for(let i = 1; i < inputArray.length - 1; i++) {
@@ -50,4 +50,22 @@ function adjacentElementsProduct(inputArray: number[]): number {
         }
         return largestProduct;
 }
-console.log(adjacentElementsProduct([3,6,-2,-5,7,3]));
+console.log(adjacentElementsProduct([3,6,-2,-5,7,3])); */
+
+//-----
+function allLongestStrings(inputArray: string[]): string[] {
+    let longestLength = 0;
+    const longestWords: string[] = [];
+
+    inputArray.forEach((word: string) => {
+        longestLength = longestLength < word.length ? word.length : longestLength;
+    });
+
+    inputArray.forEach((word: string) => {
+        if (word.length === longestLength) {
+            longestWords.push(word);
+        }
+    });
+    return longestWords;
+}
+console.log(allLongestStrings(['abadss', 'aaa', 'ad', 'dwrew', 'ddd', 'abab']));

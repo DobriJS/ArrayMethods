@@ -53,7 +53,7 @@ console.log(addTwoDigits(29)); */
 console.log(adjacentElementsProduct([3,6,-2,-5,7,3])); */
 
 //-----
-function allLongestStrings(inputArray: string[]): string[] {
+/* function allLongestStrings(inputArray: string[]): string[] {
     let longestLength = 0;
     const longestWords: string[] = [];
 
@@ -68,4 +68,21 @@ function allLongestStrings(inputArray: string[]): string[] {
     });
     return longestWords;
 }
-console.log(allLongestStrings(['abadss', 'aaa', 'ad', 'dwrew', 'ddd', 'abab']));
+console.log(allLongestStrings(['abadss', 'aaa', 'ad', 'dwrew', 'ddd', 'abab'])); */
+
+//-----
+function almostIncreasingSequence(sequence: number[]): boolean {
+    let count = 0;
+
+    for(let i = 0; i < sequence.length; i++) {
+        if (sequence[i] <= sequence[i - 1]) {
+            count++;
+            if (sequence[i] <= sequence[i - 2] && sequence[i + 1] <= sequence[i - 1]) {
+                return false;
+            }
+        }
+    }
+    return count <= 1;
+}
+console.log(almostIncreasingSequence([1,3,1,2]));
+console.log(almostIncreasingSequence([1,3,2]));

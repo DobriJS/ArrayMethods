@@ -43,3 +43,16 @@ function paperwork(n: number, m :number): number{
   }
   return n * m;
 }
+
+// Count of positives / sum of negatives
+function countPositivesSumNegatives(input: any) {
+  if(!input || input.length === 0) {
+    return [];
+  }
+
+  return [
+    input.filter((a: number) => a > 0).length,
+    input.filter((a: number) => a < 0).reduce((acc: any, a: any) => acc + a, 0)
+  ]
+}
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));

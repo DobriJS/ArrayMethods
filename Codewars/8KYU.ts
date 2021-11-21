@@ -56,3 +56,8 @@ function countPositivesSumNegatives(input: any) {
   ]
 }
 console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+
+// Exclamation marks series #4:
+function remove(s: string): string {
+  return s.split('').filter(c => c !== '!').join('') + '!';
+}

@@ -41,3 +41,8 @@ console.log(solve("coDe"));
 function findShort(s: string): number {
   return Math.min(...s.split(" ").map((w) => w.length));
 }
+
+//Even nums in an array
+function evenNumbers(array: number[], n: number): number[] {
+  return array.filter(x => x % 2 === 0).slice(-n);
+}

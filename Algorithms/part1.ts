@@ -71,7 +71,7 @@ console.log(adjacentElementsProduct([3,6,-2,-5,7,3])); */
 console.log(allLongestStrings(['abadss', 'aaa', 'ad', 'dwrew', 'ddd', 'abab'])); */
 
 //-----
-function almostIncreasingSequence(sequence: number[]): boolean {
+/* function almostIncreasingSequence(sequence: number[]): boolean {
     let count = 0;
 
     for(let i = 0; i < sequence.length; i++) {
@@ -85,4 +85,20 @@ function almostIncreasingSequence(sequence: number[]): boolean {
     return count <= 1;
 }
 console.log(almostIncreasingSequence([1,3,1,2]));
-console.log(almostIncreasingSequence([1,3,2]));
+console.log(almostIncreasingSequence([1,3,2])); */
+
+//-----
+function alternatingSums(a: number[]): number[] {
+    let evenSum = 0;
+    let oddSum = 0;
+
+    a.forEach((el, idx) => {
+        if (idx % 2 === 0) {
+            evenSum += el;
+        } else {
+            oddSum += el;
+        }
+    });
+    return [evenSum, oddSum];
+}
+console.log(alternatingSums([50, 60, 60, 45, 70]));

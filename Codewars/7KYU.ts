@@ -46,3 +46,10 @@ function findShort(s: string): number {
 function evenNumbers(array: number[], n: number): number[] {
   return array.filter(x => x % 2 === 0).slice(-n);
 }
+
+// isSortedAndHow
+function isSortedAndHow(array:number[]): string {
+  if (array.every((x,i,a) => i === 0 || a[i-1] <= x)) return "yes, ascending";
+  if (array.every((x,i,a) => i === 0 || a[i-1] >= x)) return "yes, descending";
+  return "no";
+}

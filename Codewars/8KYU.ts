@@ -1,4 +1,4 @@
-/* // Reversed Strings
+ // Reversed Strings
  function solution(str: string): string {
     let newString = "";
       for (let i = str.length - 1; i >= 0; i--) {
@@ -34,7 +34,7 @@ function litres(time: number): number {
 // Parse nice int from char problem
 function get_age(age: string): number {
   return parseInt(age)
-} */
+}
 
 // Beginner Series #1 School Paperworks
 function paperwork(n: number, m :number): number{
@@ -60,4 +60,10 @@ console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12,
 // Exclamation marks series #4:
 function remove(s: string): string {
   return s.split('').filter(c => c !== '!').join('') + '!';
+}
+
+// filter gooses
+function gooseFilter (birds: string[]): string[] {
+  const geese: string[] = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter((b:string) => geese.indexOf(b) < 0);
 }

@@ -37,7 +37,7 @@ function solve(s: string) {
 }
 console.log(solve("coDe"));
 
-// Shrotest Word
+// Shortest Word
 function findShort(s: string): number {
   return Math.min(...s.split(" ").map((w) => w.length));
 }
@@ -52,4 +52,11 @@ function isSortedAndHow(array:number[]): string {
   if (array.every((x,i,a) => i === 0 || a[i-1] <= x)) return "yes, ascending";
   if (array.every((x,i,a) => i === 0 || a[i-1] >= x)) return "yes, descending";
   return "no";
+}
+
+// Test Your Knowledge Of Function Scope
+function add(x: number): Function {
+  return function (y: number): number {
+    return x + y;
+  }
 }

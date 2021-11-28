@@ -90,7 +90,7 @@ function isSameLanguage(list: DeveloperList[]): boolean {
 console.log(isSameLanguage(list1)); */
 
 // Coding Meetup #7 - Higher-Order Functions Series - Find the most senior developer
-const list1 = [
+/* const list1 = [
   { firstName: 'Gabriel', lastName: 'X.', country: 'Monaco', continent: 'Europe', age: 49, language: 'PHP' },
   { firstName: 'Odval', lastName: 'F.', country: 'Mongolia', continent: 'Asia', age: 38, language: 'Python' },
   { firstName: 'Emilija', lastName: 'S.', country: 'Lithuania', continent: 'Europe', age: 19, language: 'Python' },
@@ -109,4 +109,28 @@ interface DeveloperList {
 function findSenior(list: DeveloperList[]) {
   const max = Math.max(...list.map(dev => dev.age));
   return list.filter(dev => dev.age === max);
+} */
+
+// Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
+const list1 = [
+  { firstName: 'Fatima', lastName: 'A.', country: 'Algeria', continent: 'Africa', age: 25, language: 'JavaScript' },
+  { firstName: 'Agustín', lastName: 'M.', country: 'Chile', continent: 'Americas', age: 37, language: 'C' },
+  { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
+  { firstName: 'Laia', lastName: 'P.', country: 'Andorra', continent: 'Europe', age: 55, language: 'Ruby' },
+  { firstName: 'Oliver', lastName: 'Q.', country: 'Australia', continent: 'Oceania', age: 65, language: 'PHP' },
+];
+
+interface DeveloperList {
+  firstName: string;
+  lastName: string;
+  country: string;
+  continent: string;
+  age: number;
+  language: string;
 }
+
+function allContinents(list: DeveloperList[]): boolean {
+  const continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  return continents.every(x => list.some(y => x === y.continent));
+}
+console.log(allContinents(list1));

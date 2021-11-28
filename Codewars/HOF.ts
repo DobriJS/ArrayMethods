@@ -112,7 +112,7 @@ function findSenior(list: DeveloperList[]) {
 } */
 
 // Coding Meetup #8 - Higher-Order Functions Series - Will all continents be represented?
-const list1 = [
+/* const list1 = [
   { firstName: 'Fatima', lastName: 'A.', country: 'Algeria', continent: 'Africa', age: 25, language: 'JavaScript' },
   { firstName: 'Agustín', lastName: 'M.', country: 'Chile', continent: 'Americas', age: 37, language: 'C' },
   { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
@@ -133,4 +133,27 @@ function allContinents(list: DeveloperList[]): boolean {
   const continents = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   return continents.every(x => list.some(y => x === y.continent));
 }
-console.log(allContinents(list1));
+console.log(allContinents(list1)); */
+
+// Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+const list1 = [
+  { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 30, language: 'Java' },
+  { firstName: 'Victoria', lastName: 'T.', country: 'Puerto Rico', continent: 'Americas', age: 70, language: 'Python' },
+];
+
+interface DeveloperList {
+  firstName: string;
+  lastName: string;
+  country: string;
+  continent: string;
+  age: number;
+  language: string;
+}
+
+function getAverageAge(list: DeveloperList[]) {
+ const avrAge = list.reduce((a, c) => {
+    return a + c.age;
+ }, 0)
+ return Math.ceil(avrAge / list.length);
+}
+console.log(getAverageAge(list1));

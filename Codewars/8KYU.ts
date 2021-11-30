@@ -67,3 +67,10 @@ function gooseFilter (birds: string[]): string[] {
   const geese: string[] = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
   return birds.filter((b:string) => geese.indexOf(b) < 0);
 }
+
+// Century From Year
+const centuryFromYear = (year: number): number => {
+  const century = Math.floor(year / 100);
+  const decade = year % 100;
+  return decade > 0 ? century + 1 : century;
+};

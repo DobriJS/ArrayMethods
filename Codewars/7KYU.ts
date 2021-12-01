@@ -60,3 +60,24 @@ function add(x: number): Function {
     return x + y;
   }
 }
+
+// Ironman Triathlon
+function iTri(s: number){
+  if (s === 0) {
+    return 'Starting Line... Good Luck!';
+  }
+  if (s < 2.4) {
+    return {Swim:`${(140.60 - s).toFixed(2)} to go!`};
+  }
+  if (s < 2.4 + 112) {
+    return  {Bike:`${(140.60 - s).toFixed(2)} to go!`};
+  }
+  if (s < 2.4 + 112 + 16.2) {
+    return {Run:`${(140.60 - s).toFixed(2)} to go!`};
+  }
+  if (s < 2.4 + 112 + 26.2) {
+    return {Run:'Nearly there!'};
+  }
+
+  return "You're done! Stop running!";
+}

@@ -135,6 +135,38 @@ function allContinents(list: DeveloperList[]): boolean {
 }
 console.log(allContinents(list1)); */
 
+// Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
+const list1 = [
+  { firstName: 'Harry', lastName: 'K.', country: 'Brazil', continent: 'Americas', age: 19, language: 'Python' },
+  { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 29, language: 'JavaScript' },
+  { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
+  { firstName: 'Noa', lastName: 'A.', country: 'Israel', continent: 'Asia', age: 40, language: 'Ruby' },
+  { firstName: 'Andrei', lastName: 'E.', country: 'Romania', continent: 'Europe', age: 59, language: 'C' },
+  { firstName: 'Maria', lastName: 'S.', country: 'Peru', continent: 'Americas', age: 60, language: 'C' },
+  { firstName: 'Lukas', lastName: 'X.', country: 'Croatia', continent: 'Europe', age: 75, language: 'Python' },
+  { firstName: 'Chloe', lastName: 'K.', country: 'Guernsey', continent: 'Europe', age: 88, language: 'Ruby' },
+  { firstName: 'Viktoria', lastName: 'W.', country: 'Bulgaria', continent: 'Europe', age: 98, language: 'PHP' },
+  { firstName: 'Piotr', lastName: 'B.', country: 'Poland', continent: 'Europe', age: 128, language: 'JavaScript' }
+];
+
+interface DeveloperList {
+  firstName: string;
+  lastName: string;
+  country: string;
+  continent: string;
+  age: number;
+  language: string;
+}
+
+function isAgeDiverse(list: DeveloperList[]) {
+  const ages = [10, 20, 30, 40, 50, 60, 70, 80, 90,100];
+  return ages.every((age) => {
+    return list.some((a) => {
+      return ( a.age - age < 10 && a.age - age >= 0 ) || ( a.age >= 100 && age == 100 );
+    });
+  });
+}
+
 // Coding Meetup #11 - Higher-Order Functions Series - Find the average age
 /* const list1 = [
   { firstName: 'Maria', lastName: 'Y.', country: 'Cyprus', continent: 'Europe', age: 30, language: 'Java' },
@@ -159,7 +191,7 @@ function getAverageAge(list: DeveloperList[]) {
 console.log(getAverageAge(list1)); */
 
 // Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
-const list1 = [
+/* const list1 = [
   { firstName: 'Harry', lastName: 'K.', country: 'Brazil', continent: 'Americas', age: 22, language: 'JavaScript', githubAdmin: 'yes' },
   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 49, language: 'Ruby', githubAdmin: 'no' },
   { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 34, language: 'JavaScript', githubAdmin: 'yes' },
@@ -179,4 +211,4 @@ interface DeveloperList {
 function findAdmin(list: DeveloperList[], lang: string) {
   return list.filter(function(dev){return dev.language == lang && dev.githubAdmin == 'yes'});
 }
-console.log(findAdmin(list1, 'JavaScript'))
+console.log(findAdmin(list1, 'JavaScript')) */

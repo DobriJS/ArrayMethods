@@ -136,7 +136,7 @@ function allContinents(list: DeveloperList[]): boolean {
 console.log(allContinents(list1)); */
 
 // Coding Meetup #9 - Higher-Order Functions Series - Is the meetup age-diverse?
-const list1 = [
+/* const list1 = [
   { firstName: 'Harry', lastName: 'K.', country: 'Brazil', continent: 'Americas', age: 19, language: 'Python' },
   { firstName: 'Kseniya', lastName: 'T.', country: 'Belarus', continent: 'Europe', age: 29, language: 'JavaScript' },
   { firstName: 'Jing', lastName: 'X.', country: 'China', continent: 'Asia', age: 39, language: 'Ruby' },
@@ -166,6 +166,34 @@ function isAgeDiverse(list: DeveloperList[]) {
     });
   });
 }
+ */
+
+// Coding Meetup #10 - Higher-Order Functions Series - Create usernames
+const list1 = [
+  { firstName: 'Emily', lastName: 'N.', country: 'Ireland', continent: 'Europe', age: 30, language: 'Ruby' },
+  { firstName: 'Nor', lastName: 'E.', country: 'Malaysia', continent: 'Asia', age: 20, language: 'Clojure' }
+];
+
+interface DeveloperList {
+  firstName: string;
+  lastName: string;
+  country: string;
+  continent: string;
+  age: number;
+  language: string;
+  username?: string;
+}
+
+function addUsername(list: DeveloperList[]) {
+  let date = Date.prototype.getFullYear();
+  return list.map((dev) => {
+    return {
+      ...dev,
+      username: (dev.firstName.toLowerCase() + dev.lastName.slice(0,1).toLowerCase() + (date - dev.age).toString())
+    }
+  })
+}
+console.log(addUsername(list1));
 
 // Coding Meetup #11 - Higher-Order Functions Series - Find the average age
 /* const list1 = [

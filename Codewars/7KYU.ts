@@ -83,7 +83,7 @@ function iTri(s: number){
 } */
 
 // Beginner Series #3 Sum of Numbers
-function getSum(a: number, b: number): number {
+/* function getSum(a: number, b: number): number {
   const start = a < b ? a : b;
   const end = start === a ? b : a;
   let sum = 0;
@@ -91,4 +91,11 @@ function getSum(a: number, b: number): number {
     sum += i;
   }
   return sum;
+} */
+
+// Numbers to Objects
+function numObj(s: number[]) {
+  return s.map(n => {
+    return { [n]: String.fromCharCode(n) };
+  });
 }

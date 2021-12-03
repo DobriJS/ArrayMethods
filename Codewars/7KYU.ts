@@ -22,7 +22,7 @@ const minValue = (values: number[]): number => {
   return Number.parseInt(values.filter((num, index) => values.indexOf(num) == index).sort().join(""));
 }; */
 
-// Fix string case
+/* // Fix string case
 function solve(s: string) {
   let countUpper = 0;
   let countLower = 0;
@@ -80,4 +80,15 @@ function iTri(s: number){
   }
 
   return "You're done! Stop running!";
+} */
+
+// Beginner Series #3 Sum of Numbers
+function getSum(a: number, b: number): number {
+  const start = a < b ? a : b;
+  const end = start === a ? b : a;
+  let sum = 0;
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return sum;
 }

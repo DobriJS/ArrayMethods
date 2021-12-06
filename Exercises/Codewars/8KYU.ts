@@ -1,4 +1,4 @@
- /* // Reversed Strings
+/* // Reversed Strings
  function solution(str: string): string {
     let newString = "";
       for (let i = str.length - 1; i >= 0; i--) {
@@ -75,3 +75,7 @@ const centuryFromYear = (year: number): number => {
   return decade > 0 ? century + 1 : century;
 }; */
 
+// Correct the mistakes of the character recognition software
+function correct(s: string): string {
+  return s.replace(/0/g, 'O').replace(/1/g, 'I').replace(/5/g, 'S');
+}

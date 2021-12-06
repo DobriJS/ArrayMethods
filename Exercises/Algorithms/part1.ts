@@ -88,7 +88,7 @@ console.log(almostIncreasingSequence([1,3,1,2]));
 console.log(almostIncreasingSequence([1,3,2])); */
 
 //-----
-function alternatingSums(a: number[]): number[] {
+/* function alternatingSums(a: number[]): number[] {
     let evenSum = 0;
     let oddSum = 0;
 
@@ -101,4 +101,4 @@ function alternatingSums(a: number[]): number[] {
     });
     return [evenSum, oddSum];
 }
-console.log(alternatingSums([50, 60, 60, 45, 70]));
+console.log(alternatingSums([50, 60, 60, 45, 70])); */

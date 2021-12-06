@@ -94,8 +94,10 @@ function iTri(s: number){
 } */
 
 // Numbers to Objects
-function numObj(s: number[]) {
+/* function numObj(s: number[]) {
   return s.map(n => {
     return { [n]: String.fromCharCode(n) };
   });
-}
+} */
+
+//

@@ -169,7 +169,7 @@ function isAgeDiverse(list: DeveloperList[]) {
  */
 
 // Coding Meetup #10 - Higher-Order Functions Series - Create usernames
-const list1 = [
+/* const list1 = [
   { firstName: 'Emily', lastName: 'N.', country: 'Ireland', continent: 'Europe', age: 30, language: 'Ruby' },
   { firstName: 'Nor', lastName: 'E.', country: 'Malaysia', continent: 'Asia', age: 20, language: 'Clojure' }
 ];
@@ -193,7 +193,7 @@ function addUsername(list: DeveloperList[]) {
     }
   })
 }
-console.log(addUsername(list1));
+console.log(addUsername(list1)); */
 
 // Coding Meetup #11 - Higher-Order Functions Series - Find the average age
 /* const list1 = [

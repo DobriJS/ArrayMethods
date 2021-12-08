@@ -109,3 +109,15 @@ function average(scores: number[]): number {
 function lovefunc(flower1: number, flower2: number): boolean {
   return (flower1 + flower2) % 2 === 1;
 }
+
+// Sort the Vowels
+const vowels = 'aeiou';
+const sortVowels = (str?: number | string | null): string =>
+  typeof str === 'number' || !str
+    ? ''
+    : str
+        .split('')
+        .map((char) =>
+          vowels.includes(char.toLowerCase()) ? `|${char}` : `${char}|`
+        )
+        .join('\n');

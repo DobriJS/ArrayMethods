@@ -100,4 +100,7 @@ function iTri(s: number){
   });
 } */
 
-//
+// Average Scores
+function average(scores: number[]): number {
+  return Math.round(scores.reduce((v1, v2) => v1 + v2) / scores.length);
+}

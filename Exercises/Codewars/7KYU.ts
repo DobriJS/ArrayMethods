@@ -104,3 +104,8 @@ function iTri(s: number){
 function average(scores: number[]): number {
   return Math.round(scores.reduce((v1, v2) => v1 + v2) / scores.length);
 }
+
+// Opposite Attract
+function lovefunc(flower1: number, flower2: number): boolean {
+  return (flower1 + flower2) % 2 === 1;
+}

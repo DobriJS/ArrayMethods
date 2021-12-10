@@ -76,11 +76,24 @@ const centuryFromYear = (year: number): number => {
 }; */
 
 // Correct the mistakes of the character recognition software
-function correct(s: string): string {
+/* function correct(s: string): string {
   return s.replace(/0/g, 'O').replace(/1/g, 'I').replace(/5/g, 'S');
 }
 
 // Plural
 function plural(n: number): boolean {
   return n !== 1;
+} */
+
+// What's the real floor ?
+function getRealFloor(n: number): number {
+  let floor: number;
+  if (n < 1) {
+    floor = n;
+  } else if (n < 13) {
+    floor = n - 1;
+  } else {
+    floor = n - 2;
+  }
+  return floor;
 }

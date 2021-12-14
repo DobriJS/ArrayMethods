@@ -131,3 +131,25 @@ function sumProduct(nums: number[], isOdd: boolean): number[] {
   return sumProducts;
 }
 console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
+
+// Sort By Height
+function sortByHeight(a: number[]): number[] {
+  const array2 = a
+    .filter((x) => {
+      if (x !== -1) {
+        return x;
+      }
+    })
+    .sort((n1, n2) => n1 - n2);
+
+  let indexVal = 0;
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== -1) {
+      a[i] = array2[indexVal];
+      indexVal++;
+    }
+  }
+  return a;
+}
+console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));

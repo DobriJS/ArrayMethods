@@ -106,7 +106,7 @@ console.log(alternatingSums([50, 60, 60, 45, 70])); */
 // Array Conversion
 // inputArray = [1,2,3,4,5,6,7,8] output should be 186
 // [1,2,3,4,5,6,7,8] -> [3,7,11,15] -> [21,156] -> [186]
-function arrayConversion(inputArray: number[]): number {
+/* function arrayConversion(inputArray: number[]): number {
   let isOdd = true;
 
   while (inputArray.length !== 1) {
@@ -130,10 +130,10 @@ function sumProduct(nums: number[], isOdd: boolean): number[] {
   }
   return sumProducts;
 }
-console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(arrayConversion([1, 2, 3, 4, 5, 6, 7, 8])); */
 
 // Sort By Height
-function sortByHeight(a: number[]): number[] {
+/* function sortByHeight(a: number[]): number[] {
   const array2 = a
     .filter((x) => {
       if (x !== -1) {
@@ -152,4 +152,16 @@ function sortByHeight(a: number[]): number[] {
   }
   return a;
 }
-console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]));
+console.log(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180])); */
+
+// First Digit
+function firstDig(inputString: string): string {
+  const digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+
+  for (let i = 0; i < inputString.length; i++) {
+    if (digits.includes(inputString[i])) {
+      return inputString[i];
+    }
+  }
+}
+console.log(firstDig('var_1_Int'));

@@ -121,3 +121,15 @@ const sortVowels = (str?: number | string | null): string =>
           vowels.includes(char.toLowerCase()) ? `|${char}` : `${char}|`
         )
         .join('\n');
+
+// Maximum Product
+function adjacentElementsProduct(arr: number[]): number {
+  let sum: number = arr[0] * arr[1];
+  for (let i: number = 0; i < arr.length - 1; i += 1) {
+    let temp: number = arr[i] * arr[i + 1];
+    if (temp > sum) {
+      sum = temp;
+    }
+  }
+  return sum;
+}

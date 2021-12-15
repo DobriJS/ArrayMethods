@@ -240,3 +240,5 @@ function findAdmin(list: DeveloperList[], lang: string) {
   return list.filter(function(dev){return dev.language == lang && dev.githubAdmin == 'yes'});
 }
 console.log(findAdmin(list1, 'JavaScript')) */
+
+// Coding Meetup #14 - Higher-Order Functions Series - Order the food

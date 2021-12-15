@@ -133,3 +133,13 @@ function adjacentElementsProduct(arr: number[]): number {
   }
   return sum;
 }
+
+// Highest and Lowest
+class Kata {
+  static highAndLow(numbers: string) {
+    const max = Math.max(...numbers.split(' ').map((i) => +i));
+    const min = Math.min(...numbers.split(' ').map((i) => +i));
+
+    return `${max} ${min}`;
+  }
+}

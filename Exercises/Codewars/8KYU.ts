@@ -97,3 +97,12 @@ function getRealFloor(n: number): number {
   }
   return floor;
 }
+
+// Generate range of integers
+function generateRange(min: number, max: number, step: number): number[] {
+  let arr = [];
+  for (let i = min; i <= max; i += step) {
+    arr.push(i);
+  }
+  return arr;
+}

@@ -106,3 +106,11 @@ function generateRange(min: number, max: number, step: number): number[] {
   }
   return arr;
 }
+
+// Return Two Highest Values in List
+function twoHighest(arr: number[]): number[] {
+  let newSet = new Set(arr);
+  return Array.from(newSet)
+    .sort((a, b) => b - a)
+    .slice(0, 2);
+}

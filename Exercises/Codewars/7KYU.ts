@@ -101,17 +101,17 @@ function iTri(s: number){
 } */
 
 // Average Scores
-function average(scores: number[]): number {
+/* function average(scores: number[]): number {
   return Math.round(scores.reduce((v1, v2) => v1 + v2) / scores.length);
-}
+} */
 
 // Opposite Attract
-function lovefunc(flower1: number, flower2: number): boolean {
+/* function lovefunc(flower1: number, flower2: number): boolean {
   return (flower1 + flower2) % 2 === 1;
-}
+} */
 
 // Sort the Vowels
-const vowels = 'aeiou';
+/* const vowels = 'aeiou';
 const sortVowels = (str?: number | string | null): string =>
   typeof str === 'number' || !str
     ? ''
@@ -120,10 +120,10 @@ const sortVowels = (str?: number | string | null): string =>
         .map((char) =>
           vowels.includes(char.toLowerCase()) ? `|${char}` : `${char}|`
         )
-        .join('\n');
+        .join('\n'); */
 
 // Maximum Product
-function adjacentElementsProduct(arr: number[]): number {
+/* function adjacentElementsProduct(arr: number[]): number {
   let sum: number = arr[0] * arr[1];
   for (let i: number = 0; i < arr.length - 1; i += 1) {
     let temp: number = arr[i] * arr[i + 1];
@@ -132,14 +132,20 @@ function adjacentElementsProduct(arr: number[]): number {
     }
   }
   return sum;
-}
+} */
 
 // Highest and Lowest
-class Kata {
+/* class Kata {
   static highAndLow(numbers: string) {
     const max = Math.max(...numbers.split(' ').map((i) => +i));
     const min = Math.min(...numbers.split(' ').map((i) => +i));
 
     return `${max} ${min}`;
   }
-}
+} */
+
+// Array plus Array
+const arrayPlusArray = (arr1: number[], arr2: number[]): number => {
+  const arrNums: number[] = [...arr1, ...arr2];
+  return arrNums.reduce((acc, val) => acc + val);
+};

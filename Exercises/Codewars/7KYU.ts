@@ -149,3 +149,12 @@ const arrayPlusArray = (arr1: number[], arr2: number[]): number => {
   const arrNums: number[] = [...arr1, ...arr2];
   return arrNums.reduce((acc, val) => acc + val);
 };
+
+// Regex validate PIN code
+class Kata {
+  static pinFormat: RegExp = new RegExp(/^\d{4}(\d{2})?$/);
+
+  static validatePin(pin: string): boolean {
+    return Kata.pinFormat.test(pin);
+  }
+}

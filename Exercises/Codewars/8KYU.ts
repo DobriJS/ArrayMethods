@@ -86,7 +86,7 @@ function plural(n: number): boolean {
 } */
 
 // What's the real floor ?
-function getRealFloor(n: number): number {
+/* function getRealFloor(n: number): number {
   let floor: number;
   if (n < 1) {
     floor = n;
@@ -96,21 +96,36 @@ function getRealFloor(n: number): number {
     floor = n - 2;
   }
   return floor;
-}
+} */
 
 // Generate range of integers
-function generateRange(min: number, max: number, step: number): number[] {
+/* function generateRange(min: number, max: number, step: number): number[] {
   let arr = [];
   for (let i = min; i <= max; i += step) {
     arr.push(i);
   }
   return arr;
-}
+} */
 
 // Return Two Highest Values in List
-function twoHighest(arr: number[]): number[] {
+/* function twoHighest(arr: number[]): number[] {
   let newSet = new Set(arr);
   return Array.from(newSet)
     .sort((a, b) => b - a)
     .slice(0, 2);
+} */
+
+// Student's Final Grade
+function finalGrade(exam: number, projects: number): number {
+  if (exam > 90 || projects > 10) {
+    return 100;
+  }
+  if (exam > 75 && projects >= 5) {
+    return 90;
+  }
+  if (exam > 50 && projects >= 2) {
+    return 75;
+  } else {
+    return 0;
+  }
 }

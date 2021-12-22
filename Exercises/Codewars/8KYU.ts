@@ -164,3 +164,18 @@ function cockroachSpeed(s: number): number {
   const cmInKm = 100000;
   return Math.floor((s * cmInKm) / secondsInHour);
 }
+
+// Safen User Input Part I - htmlspecialchars
+function htmlspecialchars(formData: string): string {
+  const htmlChars = formData
+    .split('')
+    .map((char) => {
+      if (char === '<') return '&lt;';
+      if (char === '>') return '&gt;';
+      if (char === '"') return '&quot;';
+      if (char === '&') return '&amp;';
+      return char;
+    })
+    .join('');
+  return htmlChars;
+}

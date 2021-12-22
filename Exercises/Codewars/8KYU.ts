@@ -157,3 +157,10 @@ function switchItUp(intNumber: number): string {
     'Nine',
   ][intNumber];
 }
+
+// Beginner Series #4 Cockroach
+function cockroachSpeed(s: number): number {
+  const secondsInHour = 3600;
+  const cmInKm = 100000;
+  return Math.floor((s * cmInKm) / secondsInHour);
+}

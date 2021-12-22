@@ -116,7 +116,7 @@ function plural(n: number): boolean {
 } */
 
 // Student's Final Grade
-function finalGrade(exam: number, projects: number): number {
+/* function finalGrade(exam: number, projects: number): number {
   if (exam > 90 || projects > 10) {
     return 100;
   }
@@ -128,10 +128,10 @@ function finalGrade(exam: number, projects: number): number {
   } else {
     return 0;
   }
-}
+} */
 
 // Calculate BMI
-function bmi(weight: number, height: number): string {
+/* function bmi(weight: number, height: number): string {
   // TODO: implement this method
   const bmi = weight / Math.pow(height, 2);
 
@@ -140,4 +140,20 @@ function bmi(weight: number, height: number): string {
   else if (bmi <= 30.0) return 'Overweight';
   else if (bmi > 30) return 'Obese';
   else return '';
+} */
+
+// Switch it Up!
+function switchItUp(intNumber: number): string {
+  return [
+    'Zero',
+    'One',
+    'Two',
+    'Three',
+    'Four',
+    'Five',
+    'Six',
+    'Seven',
+    'Eight',
+    'Nine',
+  ][intNumber];
 }

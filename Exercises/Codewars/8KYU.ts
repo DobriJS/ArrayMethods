@@ -143,7 +143,7 @@ function plural(n: number): boolean {
 } */
 
 // Switch it Up!
-function switchItUp(intNumber: number): string {
+/* function switchItUp(intNumber: number): string {
   return [
     'Zero',
     'One',
@@ -156,17 +156,17 @@ function switchItUp(intNumber: number): string {
     'Eight',
     'Nine',
   ][intNumber];
-}
+} */
 
 // Beginner Series #4 Cockroach
-function cockroachSpeed(s: number): number {
+/* function cockroachSpeed(s: number): number {
   const secondsInHour = 3600;
   const cmInKm = 100000;
   return Math.floor((s * cmInKm) / secondsInHour);
-}
+} */
 
 // Safen User Input Part I - htmlspecialchars
-function htmlspecialchars(formData: string): string {
+/* function htmlspecialchars(formData: string): string {
   const htmlChars = formData
     .split('')
     .map((char) => {
@@ -178,4 +178,12 @@ function htmlspecialchars(formData: string): string {
     })
     .join('');
   return htmlChars;
+} */
+
+// altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+function toAlternatingCase(s: string): string {
+  return s
+    .split('')
+    .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
+    .join('');
 }

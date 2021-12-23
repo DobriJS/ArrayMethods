@@ -187,3 +187,11 @@ function toAlternatingCase(s: string): string {
     .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
     .join('');
 }
+
+// String Templates - Bug Fixing #5
+class Kata1 {
+  public static buildString(...template: string[]): string {
+    let sentence: string = 'I like ' + template.join(', ') + '!';
+    return sentence;
+  }
+}

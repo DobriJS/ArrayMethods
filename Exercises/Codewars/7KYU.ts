@@ -145,16 +145,30 @@ const sortVowels = (str?: number | string | null): string =>
 } */
 
 // Array plus Array
-const arrayPlusArray = (arr1: number[], arr2: number[]): number => {
+/* const arrayPlusArray = (arr1: number[], arr2: number[]): number => {
   const arrNums: number[] = [...arr1, ...arr2];
   return arrNums.reduce((acc, val) => acc + val);
-};
+}; */
 
 // Regex validate PIN code
-class Kata {
+/* class Kata {
   static pinFormat: RegExp = new RegExp(/^\d{4}(\d{2})?$/);
 
   static validatePin(pin: string): boolean {
     return Kata.pinFormat.test(pin);
   }
+} */
+
+// Char Code Calculation
+function calc(str: string): number {
+  const charCodes = str.split('').map((char) => char.charCodeAt(0));
+  return sum(charCodes) - sum(charCodes.map(replace7with1));
+}
+
+function sum(arr: number[]): number {
+  return arr.reduce((total, x) => total + x, 0);
+}
+
+function replace7with1(num: number): number {
+  return parseInt(num.toString().replace(/7/g, '1'));
 }

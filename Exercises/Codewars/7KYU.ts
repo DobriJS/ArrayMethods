@@ -176,6 +176,11 @@ function replace7with1(num: number): number {
 // Isograms
 function isIsogram(str: string): boolean {
   let copyStr = str.toLowerCase();
-  let charsSet = new Set(str.split(''));
+  let charsSet = new Set(copyStr.split(''));
   return charsSet.size === copyStr.length;
+}
+
+// is Triangle ?
+function isTriangle(a: number, b: number, c: number): boolean {
+  return a > 0 && b > 0 && c > 0 && a + b > c && a + c > b && c + b > a;
 }

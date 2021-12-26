@@ -160,7 +160,7 @@ const sortVowels = (str?: number | string | null): string =>
 } */
 
 // Char Code Calculation
-function calc(str: string): number {
+/* function calc(str: string): number {
   const charCodes = str.split('').map((char) => char.charCodeAt(0));
   return sum(charCodes) - sum(charCodes.map(replace7with1));
 }
@@ -171,4 +171,11 @@ function sum(arr: number[]): number {
 
 function replace7with1(num: number): number {
   return parseInt(num.toString().replace(/7/g, '1'));
+} */
+
+// Isograms
+function isIsogram(str: string): boolean {
+  let copyStr = str.toLowerCase();
+  let charsSet = new Set(str.split(''));
+  return charsSet.size === copyStr.length;
 }

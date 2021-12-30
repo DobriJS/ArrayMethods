@@ -186,6 +186,14 @@ function replace7with1(num: number): number {
 } */
 
 // Incrementer
-const incrementer = (nums: number[]): number[] => {
+/* const incrementer = (nums: number[]): number[] => {
   return nums.map((n: number, i: number) => (n + i + 1) % 10);
+}; */
+
+// Remove duplicate words
+const removeDuplicateWords = (s: string): string => {
+  const wordArray = s.split(' ');
+  const wordSet = new Set(wordArray);
+  const result = Array.from(wordSet).join(' ');
+  return result;
 };

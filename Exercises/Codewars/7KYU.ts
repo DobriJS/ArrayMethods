@@ -200,8 +200,15 @@ function replace7with1(num: number): number {
 
 // Find the calculation type
 const calcType = (a: number, b: number, res: number): string => {
-  if (res >= a + b) {
-    return a + b === res ? 'addition' : 'multiplication';
+  if (a + b == res) {
+    return 'addition';
   }
-  return a - b === res ? 'subtraction' : 'division';
+  if (a - b == res) {
+    return 'subtraction';
+  }
+  if (a / b == res) {
+    return 'division';
+  } else {
+    return 'multiplication';
+  }
 };

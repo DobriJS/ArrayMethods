@@ -191,9 +191,17 @@ function replace7with1(num: number): number {
 }; */
 
 // Remove duplicate words
-const removeDuplicateWords = (s: string): string => {
+/* const removeDuplicateWords = (s: string): string => {
   const wordArray = s.split(' ');
   const wordSet = new Set(wordArray);
   const result = Array.from(wordSet).join(' ');
   return result;
+}; */
+
+// Find the calculation type
+const calcType = (a: number, b: number, res: number): string => {
+  if (res >= a + b) {
+    return a + b === res ? 'addition' : 'multiplication';
+  }
+  return a - b === res ? 'subtraction' : 'division';
 };

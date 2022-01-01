@@ -214,7 +214,7 @@ function replace7with1(num: number): number {
 }; */
 
 // Square Every Digit
-class Kata {
+/* class Kata {
   static squareDigits(num: number) {
     return parseInt(
       num
@@ -227,4 +227,12 @@ class Kata {
       10
     );
   }
+} */
+
+// Mumbling
+function accum(s: string): string {
+  return s
+    .split('')
+    .map((elem, index) => elem.toUpperCase() + elem.toLowerCase().repeat(index))
+    .join('-');
 }

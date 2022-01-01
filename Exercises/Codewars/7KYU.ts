@@ -199,7 +199,7 @@ function replace7with1(num: number): number {
 }; */
 
 // Find the calculation type
-const calcType = (a: number, b: number, res: number): string => {
+/* const calcType = (a: number, b: number, res: number): string => {
   if (a + b == res) {
     return 'addition';
   }
@@ -211,4 +211,20 @@ const calcType = (a: number, b: number, res: number): string => {
   } else {
     return 'multiplication';
   }
-};
+}; */
+
+// Square Every Digit
+class Kata {
+  static squareDigits(num: number) {
+    return parseInt(
+      num
+        .toString()
+        .split('')
+        .map((c) => parseInt(c, 10))
+        .map((n) => n * n)
+        .map((n) => n.toString())
+        .join(''),
+      10
+    );
+  }
+}

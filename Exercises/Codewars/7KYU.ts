@@ -230,9 +230,15 @@ function replace7with1(num: number): number {
 } */
 
 // Mumbling
-function accum(s: string): string {
+/* function accum(s: string): string {
   return s
     .split('')
     .map((elem, index) => elem.toUpperCase() + elem.toLowerCase().repeat(index))
     .join('-');
+} */
+
+// No oddities here
+function noOdds(values: number[]): number[] {
+  let noOddsArray = values.filter((num) => num % 2 === 0);
+  return noOddsArray;
 }

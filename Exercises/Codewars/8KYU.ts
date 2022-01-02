@@ -197,6 +197,11 @@ function plural(n: number): boolean {
 } */
 
 // Sentence Smash
-function smash(words: string[]): string {
+/* function smash(words: string[]): string {
   return words.join(' ');
 }
+ */
+
+// Find the position!
+const position = (alphabet: string): string =>
+  `Position of alphabet: ${'abcdefghijklmnopqrstuvwxyz'.indexOf(alphabet) + 1}`;

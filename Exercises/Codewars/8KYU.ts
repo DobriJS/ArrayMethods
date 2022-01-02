@@ -203,5 +203,10 @@ function plural(n: number): boolean {
  */
 
 // Find the position!
-const position = (alphabet: string): string =>
-  `Position of alphabet: ${'abcdefghijklmnopqrstuvwxyz'.indexOf(alphabet) + 1}`;
+/* const position = (alphabet: string): string =>
+  `Position of alphabet: ${'abcdefghijklmnopqrstuvwxyz'.indexOf(alphabet) + 1}`; */
+
+// Hex to Decimal
+function hexToDec(hexString: string): number {
+  return parseInt(hexString, 16);
+}

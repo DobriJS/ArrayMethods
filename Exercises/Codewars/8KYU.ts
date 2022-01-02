@@ -181,17 +181,22 @@ function plural(n: number): boolean {
 } */
 
 // altERnaTIng cAsE <=> ALTerNAtiNG CaSe
-function toAlternatingCase(s: string): string {
+/* function toAlternatingCase(s: string): string {
   return s
     .split('')
     .map((a) => (a === a.toUpperCase() ? a.toLowerCase() : a.toUpperCase()))
     .join('');
-}
+} */
 
 // String Templates - Bug Fixing #5
-class Kata1 {
+/* class Kata1 {
   public static buildString(...template: string[]): string {
     let sentence: string = 'I like ' + template.join(', ') + '!';
     return sentence;
   }
+} */
+
+// Sentence Smash
+function smash(words: string[]): string {
+  return words.join(' ');
 }

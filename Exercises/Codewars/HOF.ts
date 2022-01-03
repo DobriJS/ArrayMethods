@@ -242,3 +242,19 @@ function findAdmin(list: DeveloperList[], lang: string) {
 console.log(findAdmin(list1, 'JavaScript')) */
 
 // Coding Meetup #14 - Higher-Order Functions Series - Order the food
+interface DeveloperList {
+  firstName: string;
+  lastName: string;
+  country: string;
+  continent: string;
+  age: number;
+  language: string;
+  meal: string;
+}
+function orderFood(list: DeveloperList[]): object {
+  const meals = {};
+  list.forEach((dev) => {
+    meals[dev.meal] ? meals[dev.meal]++ : (meals[dev.meal] = 1);
+  });
+  return meals;
+}

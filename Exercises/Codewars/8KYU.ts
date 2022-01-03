@@ -207,6 +207,12 @@ function plural(n: number): boolean {
   `Position of alphabet: ${'abcdefghijklmnopqrstuvwxyz'.indexOf(alphabet) + 1}`; */
 
 // Hex to Decimal
-function hexToDec(hexString: string): number {
+/* function hexToDec(hexString: string): number {
   return parseInt(hexString, 16);
+} */
+
+// Printing Array elements with Comma delimiters
+function printArray(array: Number[]) {
+  const delimeters = array.join(',');
+  return delimeters;
 }

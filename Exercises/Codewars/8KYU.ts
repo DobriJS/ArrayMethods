@@ -212,7 +212,4 @@ function plural(n: number): boolean {
 } */
 
 // Printing Array elements with Comma delimiters
-function printArray(array: Number[]) {
-  const delimeters = array.join(',');
-  return delimeters;
-}
+const printArray = (arr: any): string => arr.join(',');

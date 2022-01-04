@@ -242,3 +242,17 @@ function noOdds(values: number[]): number[] {
   let noOddsArray = values.filter((num) => num % 2 === 0);
   return noOddsArray;
 }
+
+// Two to One
+class G964 {
+  public static longest = (s1, s2) => {
+    return (s1 + s2)
+      .split('')
+      .sort()
+      .filter(
+        (letter: string, index: number, arr: Array<string>) =>
+          arr.indexOf(letter) === index
+      )
+      .join('');
+  };
+}

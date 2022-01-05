@@ -212,4 +212,9 @@ function plural(n: number): boolean {
 } */
 
 // Printing Array elements with Comma delimiters
-const printArray = (arr: any): string => arr.join(',');
+/* const printArray = (arr: any): string => arr.join(','); */
+
+// L1: Set Alarm
+function setAlarm(employed: boolean, vacation: boolean) {
+  return employed && !vacation;
+}

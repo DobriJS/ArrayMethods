@@ -238,13 +238,13 @@ function replace7with1(num: number): number {
 } */
 
 // No oddities here
-function noOdds(values: number[]): number[] {
+/* function noOdds(values: number[]): number[] {
   let noOddsArray = values.filter((num) => num % 2 === 0);
   return noOddsArray;
-}
+} */
 
 // Two to One
-class G964 {
+/* class G964 {
   public static longest = (s1, s2) => {
     return (s1 + s2)
       .split('')
@@ -256,3 +256,9 @@ class G964 {
       .join('');
   };
 }
+ */
+
+// Say "Hello World" JS Style
+const say = (string1: string) => {
+  return (string2: string) => `${string1} ${string2}`;
+};

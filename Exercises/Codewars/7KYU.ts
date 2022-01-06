@@ -259,6 +259,19 @@ function replace7with1(num: number): number {
  */
 
 // Say "Hello World" JS Style
-const say = (string1: string) => {
+/* const say = (string1: string) => {
   return (string2: string) => `${string1} ${string2}`;
-};
+}; */
+
+// Alternate capitalization
+function capitalize(s: string) {
+  let s1: string = '';
+  let s2: string = '';
+
+  s.split('').forEach((elem, index) => {
+    s1 += index % 2 ? elem : elem.toUpperCase();
+    s2 += index % 2 ? elem.toUpperCase() : elem;
+  });
+
+  return [s1, s2];
+}

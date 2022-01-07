@@ -286,3 +286,8 @@ class Challenge {
     return s.slice(lowIndex, highIndex);
   }
 }
+
+// Small enough? - Beginner
+function smallEnough(a: number[], limit: number): boolean {
+  return a.every((val) => val <= limit);
+}

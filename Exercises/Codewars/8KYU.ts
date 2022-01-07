@@ -215,6 +215,6 @@ function plural(n: number): boolean {
 /* const printArray = (arr: any): string => arr.join(','); */
 
 // L1: Set Alarm
-function setAlarm(employed: boolean, vacation: boolean) {
+/* function setAlarm(employed: boolean, vacation: boolean) {
   return employed && !vacation;
-}
+} */

@@ -264,7 +264,7 @@ function replace7with1(num: number): number {
 }; */
 
 // Alternate capitalization
-function capitalize(s: string) {
+/* function capitalize(s: string) {
   let s1: string = '';
   let s2: string = '';
 
@@ -274,4 +274,15 @@ function capitalize(s: string) {
   });
 
   return [s1, s2];
+} */
+
+// Get the Middle Character
+class Challenge {
+  static getMiddle(s: string) {
+    const middle = s.length / 2;
+    const lowIndex = Math.ceil(middle - 1);
+    const highIndex = Math.floor(middle + 1);
+
+    return s.slice(lowIndex, highIndex);
+  }
 }

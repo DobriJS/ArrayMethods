@@ -277,7 +277,7 @@ function replace7with1(num: number): number {
 } */
 
 // Get the Middle Character
-class Challenge {
+/* class Challenge {
   static getMiddle(s: string) {
     const middle = s.length / 2;
     const lowIndex = Math.ceil(middle - 1);
@@ -290,4 +290,10 @@ class Challenge {
 // Small enough? - Beginner
 function smallEnough(a: number[], limit: number): boolean {
   return a.every((val) => val <= limit);
+} */
+
+// Two oldes ages
+function twoOldestAges(ages: number[]): number[] {
+  const arr = [...ages];
+  return arr.sort((a, b) => a - b).splice(-2);
 }

@@ -293,7 +293,14 @@ function smallEnough(a: number[], limit: number): boolean {
 } */
 
 // Two oldes ages
-function twoOldestAges(ages: number[]): number[] {
+/* function twoOldestAges(ages: number[]): number[] {
   const arr = [...ages];
   return arr.sort((a, b) => a - b).splice(-2);
+} */
+
+// Disemvowel Trolls
+class Kata {
+  static disemvowel(str: string): string {
+    return str.replace(/[aeiou]/gi, '');
+  }
 }

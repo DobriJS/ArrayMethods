@@ -299,8 +299,13 @@ function smallEnough(a: number[], limit: number): boolean {
 } */
 
 // Disemvowel Trolls
-class Kata {
+/* class Kata {
   static disemvowel(str: string): string {
     return str.replace(/[aeiou]/gi, '');
   }
+} */
+
+// You're a square!
+function isSquare(n: number): boolean {
+  return Number.isInteger(Math.sqrt(n));
 }

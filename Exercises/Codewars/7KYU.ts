@@ -306,6 +306,6 @@ function smallEnough(a: number[], limit: number): boolean {
 } */
 
 // You're a square!
-function isSquare(n: number): boolean {
+/* function isSquare(n: number): boolean {
   return Number.isInteger(Math.sqrt(n));
-}
+} */

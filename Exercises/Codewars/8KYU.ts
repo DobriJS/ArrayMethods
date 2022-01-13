@@ -231,3 +231,8 @@ const fakeBin = (x: string): string => {
 function dutyFree(normPrice: number, discount: number, hol: number): number {
   return Math.floor(hol / ((normPrice * discount) / 100));
 }
+
+// Twice as old
+function twiceAsOld(dad: number, son: number): number {
+  return Math.abs(dad - son * 2);
+}

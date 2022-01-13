@@ -226,3 +226,8 @@ const fakeBin = (x: string): string => {
     .map((el) => (Number(el) < 5 ? 0 : 1))
     .join('');
 };
+
+// Holiday VIII - Duty Free
+function dutyFree(normPrice: number, discount: number, hol: number): number {
+  return Math.floor(hol / ((normPrice * discount) / 100));
+}

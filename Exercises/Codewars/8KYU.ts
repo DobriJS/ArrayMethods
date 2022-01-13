@@ -218,3 +218,11 @@ function plural(n: number): boolean {
 /* function setAlarm(employed: boolean, vacation: boolean) {
   return employed && !vacation;
 } */
+
+// Fake Binary
+const fakeBin = (x: string): string => {
+  return x
+    .split('')
+    .map((el) => (Number(el) < 5 ? 0 : 1))
+    .join('');
+};

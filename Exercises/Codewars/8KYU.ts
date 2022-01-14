@@ -241,3 +241,8 @@ function plural(n: number): boolean {
 function findAverage(array: number[]): number {
   return !array.length ? 0 : array.reduce((a, b) => a + b, 0) / array.length;
 }
+
+// Get Nth Even Number
+function nthEven(n: number) {
+  return 2 * (n - 1);
+}

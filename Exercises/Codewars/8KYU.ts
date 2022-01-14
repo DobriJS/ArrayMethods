@@ -246,3 +246,8 @@ function findAverage(array: number[]): number {
 function nthEven(n: number) {
   return 2 * (n - 1);
 }
+
+// Quarter of the year
+function quarterOf(month: number): number {
+  return Math.ceil((month * 4) / 12);
+}

@@ -220,19 +220,24 @@ function plural(n: number): boolean {
 } */
 
 // Fake Binary
-const fakeBin = (x: string): string => {
+/* const fakeBin = (x: string): string => {
   return x
     .split('')
     .map((el) => (Number(el) < 5 ? 0 : 1))
     .join('');
-};
+}; */
 
 // Holiday VIII - Duty Free
-function dutyFree(normPrice: number, discount: number, hol: number): number {
+/* function dutyFree(normPrice: number, discount: number, hol: number): number {
   return Math.floor(hol / ((normPrice * discount) / 100));
-}
+} */
 
 // Twice as old
-function twiceAsOld(dad: number, son: number): number {
+/* function twiceAsOld(dad: number, son: number): number {
   return Math.abs(dad - son * 2);
+} */
+
+// Calculate average
+function findAverage(array: number[]): number {
+  return !array.length ? 0 : array.reduce((a, b) => a + b, 0) / array.length;
 }

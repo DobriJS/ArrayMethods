@@ -256,3 +256,12 @@ function plural(n: number): boolean {
 function otherAngle(a: number, b: number): number {
   return 180 - a - b;
 }
+
+// Exclamation marks series #1: Remove an exclamation mark from the end of string
+function remove(s: string): string {
+  if (s.endsWith('!')) {
+    return s.slice(0, s.length - 1);
+  } else {
+    return s;
+  }
+}

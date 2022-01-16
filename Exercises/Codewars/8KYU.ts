@@ -238,16 +238,21 @@ function plural(n: number): boolean {
 } */
 
 // Calculate average
-function findAverage(array: number[]): number {
+/* function findAverage(array: number[]): number {
   return !array.length ? 0 : array.reduce((a, b) => a + b, 0) / array.length;
-}
+} */
 
 // Get Nth Even Number
-function nthEven(n: number) {
+/* function nthEven(n: number) {
   return 2 * (n - 1);
-}
+} */
 
 // Quarter of the year
-function quarterOf(month: number): number {
+/* function quarterOf(month: number): number {
   return Math.ceil((month * 4) / 12);
+} */
+
+// Third Angle of a Triangle
+function otherAngle(a: number, b: number): number {
+  return 180 - a - b;
 }

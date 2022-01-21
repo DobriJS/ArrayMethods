@@ -283,3 +283,12 @@ function plural(n: number): boolean {
 /* String.prototype.digit = function (): boolean {
   return /^\d$/.test(this);
 }; */
+
+// For Twins: 2. Math operations
+const iceBrickVolume = (
+  radius: number,
+  bottleLength: number,
+  rimLength: number
+): number => {
+  return (bottleLength - rimLength) * 2 * radius ** 2;
+};

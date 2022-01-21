@@ -267,7 +267,7 @@ function plural(n: number): boolean {
 } */
 
 // I love you, a little , a lot, passionately
-function howMuchILoveYou(petals: number): string {
+/* function howMuchILoveYou(petals: number): string {
   const flower = [
     'I love you',
     'a little',
@@ -277,4 +277,9 @@ function howMuchILoveYou(petals: number): string {
     'not at all',
   ];
   return flower[--petals % flower.length];
-}
+} */
+
+// Regexp Basics - is it a digit?
+/* String.prototype.digit = function (): boolean {
+  return /^\d$/.test(this);
+}; */

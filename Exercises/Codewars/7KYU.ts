@@ -309,3 +309,11 @@ function smallEnough(a: number[], limit: number): boolean {
 /* function isSquare(n: number): boolean {
   return Number.isInteger(Math.sqrt(n));
 } */
+
+// Single digit
+function singleDigit(n: number): number {
+  function bitCount(m: number): number {
+    return (m.toString(2).match(/1/g) || []).length;
+  }
+  return n > 9 ? singleDigit(bitCount(n)) : n;
+}

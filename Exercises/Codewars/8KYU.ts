@@ -285,10 +285,15 @@ function plural(n: number): boolean {
 }; */
 
 // For Twins: 2. Math operations
-const iceBrickVolume = (
+/* const iceBrickVolume = (
   radius: number,
   bottleLength: number,
   rimLength: number
 ): number => {
   return (bottleLength - rimLength) * 2 * radius ** 2;
-};
+}; */
+
+// DNA to RNA Conversion
+function DNAtoRNA(dna: string): string {
+  return dna.replace(/T/g, 'U');
+}

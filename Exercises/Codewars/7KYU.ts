@@ -311,19 +311,19 @@ function smallEnough(a: number[], limit: number): boolean {
 } */
 
 // Single digit
-function singleDigit(n: number): number {
+/* function singleDigit(n: number): number {
   function bitCount(m: number): number {
     return (m.toString(2).match(/1/g) || []).length;
   }
   return n > 9 ? singleDigit(bitCount(n)) : n;
-}
+} */
 
 // Sum of the first nth term of Series
-function SeriesSum(n: number) {
+/* function SeriesSum(n: number) {
   let sum = 0;
   for (let i = 0; i < n; i++) {
     sum += 1 / (1 + 3 * i);
   }
 
   return sum.toFixed(2);
-}
+} */

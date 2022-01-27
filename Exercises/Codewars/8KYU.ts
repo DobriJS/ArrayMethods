@@ -294,14 +294,19 @@ function plural(n: number): boolean {
 }; */
 
 // DNA to RNA Conversion
-function DNAtoRNA(dna: string): string {
+/* function DNAtoRNA(dna: string): string {
   return dna.replace(/T/g, 'U');
-}
+} */
 
 // How good are you really?
-function betterThanAverage(classPoints: number[], yourPoints: number) {
+/* function betterThanAverage(classPoints: number[], yourPoints: number) {
   const average =
     classPoints.concat(yourPoints).reduce((prev, curr) => prev + curr) /
     (classPoints.length + 1);
   return yourPoints > average;
+} */
+
+// The Feast of Many Beasts
+function feast(beast: string, dish: string): boolean {
+  return beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1);
 }

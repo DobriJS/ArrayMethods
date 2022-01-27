@@ -297,3 +297,11 @@ function plural(n: number): boolean {
 function DNAtoRNA(dna: string): string {
   return dna.replace(/T/g, 'U');
 }
+
+// How good are you really?
+function betterThanAverage(classPoints: number[], yourPoints: number) {
+  const average =
+    classPoints.concat(yourPoints).reduce((prev, curr) => prev + curr) /
+    (classPoints.length + 1);
+  return yourPoints > average;
+}

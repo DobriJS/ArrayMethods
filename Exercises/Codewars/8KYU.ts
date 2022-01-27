@@ -310,3 +310,30 @@ function plural(n: number): boolean {
 function feast(beast: string, dish: string): boolean {
   return beast[0] === dish[0] && beast.slice(-1) === dish.slice(-1);
 }
+
+// Subtract the Sum
+interface IList {
+  [position: string]: string;
+}
+
+const list: IList = {
+  1: 'kiwi',
+  2: 'pear',
+  3: 'kiwi',
+  4: 'banana',
+  5: 'melon',
+  6: 'banana',
+  7: 'melon',
+  8: 'pineapple',
+  9: 'apple',
+};
+
+export function subtractSum(n: number): string {
+  const sum: number = n
+    .toString(10)
+    .split('')
+    .reduce((acc, val) => acc + parseInt(val, 10), 0);
+  const newN: number = n - sum;
+
+  return newN in list ? list[newN] : subtractSum(newN);
+}

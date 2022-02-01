@@ -327,3 +327,11 @@ function smallEnough(a: number[], limit: number): boolean {
 
   return sum.toFixed(2);
 } */
+
+// Printer Errors
+class G964 {
+  public static printerError(s: string): string {
+    let r = s.replace(/[a-m]/g, '');
+    return r.length + '/' + s.length;
+  }
+}

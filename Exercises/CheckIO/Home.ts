@@ -121,3 +121,11 @@ countDigits('who is 1st here') // 1 */
     return line.slice(line.indexOf(left) + 1, line.indexOf(right));
   }
   betweenMarkers('What is >apple<', '>', '<') // 'apple' */
+
+//-----
+function sumNumbers(test: string): number {
+  return test
+    .split(' ')
+    .filter(Number)
+    .reduce((a, i) => a + Number(i), 0);
+}

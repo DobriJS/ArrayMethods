@@ -229,3 +229,42 @@ export function backDoorResponse(line) {
 export function backDoorPassword(word) {
   return word[0].toUpperCase() + word.slice(1, word.length) + ', please';
 }
+
+// Bird Watcher ------------ ///
+
+export function totalBirdCount(birdsPerDay) {
+  let count = 0;
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    count += birdsPerDay[i];
+  }
+  return count;
+}
+
+/**
+ * Calculates the total number of birds seen in a specific week.
+ *
+ * @param {number[]} birdsPerDay
+ * @param {number} week
+ * @returns {number} birds counted in the given week
+ */
+export function birdsInWeek(birdsPerDay, week) {
+  const idx = (week - 1) * 7;
+  const totalCount = birdsPerDay.slice(idx, idx + 7);
+  return totalBirdCount(totalCount);
+}
+
+/**
+ * Fixes the counting mistake by increasing the bird count
+ * by one for every second day.
+ *
+ * @param {number[]} birdsPerDay
+ * @returns {number[]} corrected bird count data
+ */
+export function fixBirdCountLog(birdsPerDay) {
+  for (let i = 0; i < birdsPerDay.length; i++) {
+    if (i % 2 === 0) {
+      birdsPerDay[i]++;
+    }
+  }
+  return birdsPerDay;
+}

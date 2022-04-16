@@ -1,7 +1,7 @@
 // Lucian's Luscious Lasagna --------- //
 
 const PREPARATION_MINUTES_PER_LAYER = 2;
-export const EXPECTED_MINUTES_IN_OVEN = 40;
+const EXPECTED_MINUTES_IN_OVEN = 40;
 /**
  * Determines the amount of minutes the lasagna still needs to remain in the
  * oven to be properly prepared.
@@ -9,7 +9,7 @@ export const EXPECTED_MINUTES_IN_OVEN = 40;
  * @param {number} actualMinutesInOven
  * @returns {number} the number of minutes remaining
  */
-export function remainingMinutesInOven(actualMinutesInOven) {
+function remainingMinutesInOven(actualMinutesInOven) {
   return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
 }
 
@@ -19,7 +19,7 @@ export function remainingMinutesInOven(actualMinutesInOven) {
  * @param {number} numberOfLayers
  * @returns {number} the total preparation time
  */
-export function preparationTimeInMinutes(numberOfLayers) {
+function preparationTimeInMinutes(numberOfLayers) {
   return PREPARATION_MINUTES_PER_LAYER * numberOfLayers;
 }
 
@@ -31,7 +31,7 @@ export function preparationTimeInMinutes(numberOfLayers) {
  * @param {number} actualMinutesInOven
  * @returns {number} the total working time
  */
-export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
+function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
   return preparationTimeInMinutes(numberOfLayers) + actualMinutesInOven;
 }
 
@@ -44,7 +44,7 @@ export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
  *
  * @return {boolean} Whether or not you can execute a fast attack.
  */
-export function canExecuteFastAttack(knightIsAwake) {
+function canExecuteFastAttack(knightIsAwake) {
   if (!knightIsAwake) {
     return true;
   }
@@ -60,7 +60,7 @@ export function canExecuteFastAttack(knightIsAwake) {
  *
  * @returns {boolean} Whether or not you can spy on someone.
  */
-export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
+function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
   return knightIsAwake || archerIsAwake || prisonerIsAwake;
 }
 
@@ -72,7 +72,7 @@ export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
  */
-export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
+function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
   return !archerIsAwake && prisonerIsAwake;
 }
 
@@ -86,7 +86,7 @@ export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
  *
  * @returns {boolean} Whether or not you can free Annalyn's friend.
  */
-export function canFreePrisoner(
+function canFreePrisoner(
   knightIsAwake,
   archerIsAwake,
   prisonerIsAwake,
@@ -100,7 +100,7 @@ export function canFreePrisoner(
 
 // Bank Account -------------- //
 
-export class BankAccount {
+class BankAccount {
   constructor() {
     this._balance = 0;
     this.isOpen = false;
@@ -143,7 +143,7 @@ export class BankAccount {
   }
 }
 
-export class ValueError extends Error {
+class ValueError extends Error {
   constructor() {
     super('Bank account error');
   }
@@ -157,7 +157,7 @@ export class ValueError extends Error {
  * @param {number} ratePerHour
  * @returns {number} the rate per day
  */
-export function dayRate(ratePerHour) {
+function dayRate(ratePerHour) {
   return 8 * ratePerHour;
 }
 
@@ -168,7 +168,7 @@ export function dayRate(ratePerHour) {
  * @param {number} ratePerHour: the rate per hour
  * @returns {number} the number of days
  */
-export function daysInBudget(budget, ratePerHour) {
+function daysInBudget(budget, ratePerHour) {
   return Math.floor(budget / dayRate(ratePerHour));
 }
 
@@ -180,7 +180,7 @@ export function daysInBudget(budget, ratePerHour) {
  * @param {number} discount: for example 20% written as 0.2
  * @returns {number} the rounded up discounted rate
  */
-export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
+function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
   const fullMonths = Math.floor(numDays / 22);
   const remainingDays = numDays % 22;
   const fullMonthPrice = fullMonths * 22 * dayRate(ratePerHour);
@@ -193,7 +193,7 @@ export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
 
 // Poetry Club Door Policy ------------- //
 
-export function frontDoorResponse(line) {
+function frontDoorResponse(line) {
   return line[0];
 }
 
@@ -204,7 +204,7 @@ export function frontDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the front door password
  */
-export function frontDoorPassword(word) {
+function frontDoorPassword(word) {
   return word[0].toUpperCase() + word.slice(1, word.length).toLowerCase();
 }
 
@@ -215,7 +215,7 @@ export function frontDoorPassword(word) {
  * @param {string} line
  * @returns {string}
  */
-export function backDoorResponse(line) {
+function backDoorResponse(line) {
   return line.trimEnd().slice(-1);
 }
 
@@ -226,13 +226,13 @@ export function backDoorResponse(line) {
  * @param {string} word the letters you responded with before
  * @returns {string} the back door password
  */
-export function backDoorPassword(word) {
+function backDoorPassword(word) {
   return word[0].toUpperCase() + word.slice(1, word.length) + ', please';
 }
 
 // Bird Watcher ------------ ///
 
-export function totalBirdCount(birdsPerDay) {
+function totalBirdCount(birdsPerDay) {
   let count = 0;
   for (let i = 0; i < birdsPerDay.length; i++) {
     count += birdsPerDay[i];
@@ -247,7 +247,7 @@ export function totalBirdCount(birdsPerDay) {
  * @param {number} week
  * @returns {number} birds counted in the given week
  */
-export function birdsInWeek(birdsPerDay, week) {
+function birdsInWeek(birdsPerDay, week) {
   const idx = (week - 1) * 7;
   const totalCount = birdsPerDay.slice(idx, idx + 7);
   return totalBirdCount(totalCount);
@@ -260,7 +260,7 @@ export function birdsInWeek(birdsPerDay, week) {
  * @param {number[]} birdsPerDay
  * @returns {number[]} corrected bird count data
  */
-export function fixBirdCountLog(birdsPerDay) {
+function fixBirdCountLog(birdsPerDay) {
   for (let i = 0; i < birdsPerDay.length; i++) {
     if (i % 2 === 0) {
       birdsPerDay[i]++;
@@ -278,7 +278,7 @@ export function fixBirdCountLog(birdsPerDay) {
  * @param {number[]} array2
  * @returns {number} sum of the two arrays
  */
-export function twoSum(array1, array2) {
+function twoSum(array1, array2) {
   const slot1 = array1.join('');
   const slot2 = array2.join('');
   return Number(slot1) + Number(slot2);
@@ -290,7 +290,7 @@ export function twoSum(array1, array2) {
  * @param {number} value
  * @returns {boolean}  whether the number is a palindrome or not
  */
-export function luckyNumber(value) {
+function luckyNumber(value) {
   const reversed = String(value).split('').reverse().join('');
   return reversed == value;
 }
@@ -302,8 +302,69 @@ export function luckyNumber(value) {
  * @param {string|null|undefined} input
  * @returns {string} error message
  */
-export function errorMessage(input) {
+function errorMessage(input) {
   if (!input) return 'Required field';
   if (input == 0 || !Number(input)) return 'Must be a number besides 0';
   return '';
+}
+
+// Mixed Juice --------------- //
+
+function timeToMixJuice(name) {
+  const juicesPreparationTimeInMin = {
+    'Pure Strawberry Joy': 0.5,
+    Energizer: 1.5,
+    'Green Garden': 1.5,
+    'Tropical Island': 3,
+    'All or Nothing': 5
+  };
+  return juicesPreparationTimeInMin[name]
+    ? juicesPreparationTimeInMin[name]
+    : 2.5;
+}
+
+function limesToCut(wedgesNeeded, limes) {
+  let limesWedges = [];
+
+  for (let i = 0; i < limes.length; i++) {
+    let wedges = 0;
+    switch (limes[i]) {
+      case 'small':
+        wedges = 6;
+        break;
+      case 'medium':
+        wedges = 8;
+        break;
+      case 'large':
+        wedges = 10;
+        break;
+    }
+    limesWedges.push(wedges);
+  }
+
+  let i = 0;
+  let wedgesHad = 0;
+
+  while (wedgesHad < wedgesNeeded) {
+    wedgesHad += limesWedges[i];
+    if (i < limesWedges.length) {
+      i++;
+    }
+  }
+  return i;
+}
+
+/**
+ * Determines which juices still need to be prepared after the end of the shift.
+ *
+ * @param {number} timeLeft
+ * @param {string[]} orders
+ * @returns {string[]} remaining orders after the time is up
+ */
+function remainingOrders(timeLeft, orders) {
+  const unfinishedOrders = [...orders];
+  while (timeLeft > 0 && unfinishedOrders.length > 0) {
+    timeLeft -= timeToMixJuice(unfinishedOrders.shift());
+  }
+  return unfinishedOrders;
 }

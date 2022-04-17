@@ -441,3 +441,53 @@ function applyMondayBonus(scoreBoard) {
 function normalizeScore(params) {
   return params.normalizeFunction(params.score);
 }
+
+// Lasagna Master ------------------ //
+
+function cookingStatus(timer) {
+  if (timer === 0) {
+    return 'Lasagna is done.';
+  }
+  if (timer === undefined) {
+    return 'You forgot to set the timer.';
+  }
+  return 'Not done, please wait.';
+}
+
+function preparationTime(layers, averageTimePerLayerInMinutes = 2) {
+  return layers.length * averageTimePerLayerInMinutes;
+}
+
+function quantities(layers) {
+  const sauceNeededPerLayerInLitres = 0.2;
+  const lasagnaNeededPerPayerInGrams = 50;
+  let noodles = 0;
+  let sauce = 0;
+
+  for (let ing of layers) {
+    if (ing === 'sauce') {
+      sauce++;
+    }
+    if (ing === 'noodles') {
+      noodles++;
+    }
+  }
+  return {
+    noodles: noodles * lasagnaNeededPerPayerInGrams,
+    sauce: sauce * sauceNeededPerLayerInLitres
+  };
+}
+
+function addSecretIngredient(friendsList, myList) {
+  const secret = friendsList[friendsList.length - 1];
+  myList.push(secret);
+}
+
+function scaleRecipe(recipe, portions = 1) {
+  const scaledPortions = { ...recipe };
+  const factor = portions / 2;
+  for (let ingredient in scaledPortions) {
+    scaledPortions[ingredient] *= factor;
+  }
+  return scaledPortions;
+}

@@ -407,3 +407,32 @@ function getFirstOddCard(stack) {
 function getFirstEvenCardPosition(stack) {
   return stack.findIndex((card) => card % 2 === 0);
 }
+
+// Elyses Destructured Enchantments ----------- //
+
+function getFirstCard(deck) {
+  const [first, second, ...remaining] = deck;
+  return first;
+}
+
+function getSecondCard(deck) {
+  const [first, second, ...remaining] = deck;
+  return second;
+}
+
+function swapTopTwoCards(deck) {
+  const [first, second, ...remaining] = deck;
+  return [second, first, ...remaining];
+}
+
+function discardTopCard(deck) {
+  const [first, ...remaining] = deck;
+  return [first, remaining];
+}
+
+const FACE_CARDS = ['jack', 'queen', 'king'];
+
+function insertFaceCards(deck) {
+  const [first, ...rest] = deck;
+  return [first, ...FACE_CARDS, ...rest];
+}

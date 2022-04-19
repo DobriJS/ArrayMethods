@@ -471,3 +471,30 @@ function determineOddEvenCards(stack, type) {
   }
   return cardCount;
 }
+
+// Coordinate Transformation ------------------------- //
+
+function translate2d(dx, dy) {
+  return (x, y) => [x + dx, y + dy];
+}
+
+function scale2d(sx, sy) {
+  return (x, y) => [x * sx, y * sy];
+}
+
+function composeTransform(f, g) {
+  return (x, y) => g(...f(x, y));
+}
+
+function memoizeTransform(f) {
+  let previousX, previousY, previousResult;
+
+  return function memoised(x, y) {
+    if (previousX === x && previousY === y) {
+      return previousResult;
+    }
+    previousX = x;
+    previousY = y;
+    return (previousResult = f(x, y));
+  };
+}

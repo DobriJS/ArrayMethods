@@ -501,7 +501,7 @@ function memoizeTransform(f) {
 
 // Windowing System -------------- //
 
-export class Size {
+class Size {
   constructor(width = 80, height = 60) {
     this.width = width;
     this.height = height;
@@ -511,7 +511,7 @@ export class Size {
   }
 }
 
-export class Position {
+class Position {
   constructor(x = 0, y = 0) {
     this.x = x;
     this.y = y;
@@ -521,7 +521,7 @@ export class Position {
   }
 }
 
-export class ProgramWindow {
+class ProgramWindow {
   constructor() {
     this.screenSize = new Size(800, 600);
     this.size = new Size();
@@ -545,9 +545,50 @@ export class ProgramWindow {
   }
 }
 
-export function changeWindow(programWindow) {
+function changeWindow(programWindow) {
   programWindow.move(new Position());
   programWindow.resize(new Size(400, 300));
   programWindow.move(new Position(100, 150));
   return programWindow;
+}
+
+// Elyses Transformative Enchantments -------------- //
+
+function seeingDouble(deck) {
+  return deck.map((card) => card * 2);
+}
+
+function threeOfEachThree(deck) {
+  return deck.reduce((result, card) => {
+    if (card === 3) {
+      result.push(card, card, card);
+    } else {
+      result.push(card);
+    }
+    return result;
+  }, []);
+}
+
+function middleTwo(deck) {
+  const middle = deck.length / 2;
+  return deck.slice(middle - 1, middle + 1);
+}
+
+function sandwichTrick(deck) {
+  let firstCard = deck.shift();
+  let lastCard = deck.pop();
+  deck.splice(deck.length / 2, 0, lastCard, firstCard);
+  return deck;
+}
+
+function twoIsSpecial(deck) {
+  return deck.filter((card) => card === 2);
+}
+
+function perfectlyOrdered(deck) {
+  return deck.sort((a, b) => a - b);
+}
+
+function reorder(deck) {
+  return deck.reverse();
 }

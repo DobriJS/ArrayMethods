@@ -446,3 +446,28 @@ const score = (x, y) => {
   if (radius <= 5) return 5;
   return 1;
 };
+
+// Elyses Looping Enchantments ----------------- //
+
+function cardTypeCheck(stack, cardType) {
+  let cardCount = 0;
+  for (let card of stack) {
+    if (card === cardType) {
+      cardCount++;
+    }
+  }
+  return cardCount;
+}
+
+function determineOddEvenCards(stack, type) {
+  let cardCount = 0;
+  for (let card of stack) {
+    if (card % 2 === 0 && type) {
+      cardCount++;
+    }
+    if (card % 2 !== 0 && !type) {
+      cardCount++;
+    }
+  }
+  return cardCount;
+}

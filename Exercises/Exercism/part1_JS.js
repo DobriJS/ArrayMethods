@@ -592,3 +592,29 @@ function perfectlyOrdered(deck) {
 function reorder(deck) {
   return deck.reverse();
 }
+
+// Ozan's Playlist -------------- //
+
+function removeDuplicates(playlist) {
+  const list = new Set(playlist);
+  return [...list];
+}
+
+function hasTrack(playlist, track) {
+  const list = new Set(playlist);
+  return list.has(track);
+}
+
+function addTrack(playlist, track) {
+  return !hasTrack(playlist, track) ? [...playlist, track] : playlist;
+}
+
+function deleteTrack(playlist, track) {
+  const list = new Set(playlist);
+  list.delete(track);
+  return [...list];
+}
+
+function listArtists(playlist) {
+  return removeDuplicates(playlist.map((artist) => artist.split(' - ')[1]));
+}

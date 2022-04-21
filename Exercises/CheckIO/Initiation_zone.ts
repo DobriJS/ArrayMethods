@@ -13,3 +13,8 @@ function easyUnpack(values: any[]): any[] {
 function isAcceptablePassword(password: string): boolean {
   return password.length > 6;
 }
+
+// Number Length
+function numberLength(value: number): number {
+  return value.toString().length;
+}

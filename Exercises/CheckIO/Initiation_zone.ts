@@ -18,3 +18,9 @@ function isAcceptablePassword(password: string): boolean {
 function numberLength(value: number): number {
   return value.toString().length;
 }
+
+// End Zeros
+function endZeros(value: number): number {
+  const str = String(value);
+  return str.length - str.replace(/0*$/, '').length;
+}

@@ -33,3 +33,11 @@ function backwardString(value: string): string {
   }
   return reversed;
 }
+
+// Remove All Before
+function removeAllBefore(values: number[], b: number): number[] {
+  if (values.length === 0) return values;
+  if (!values.includes(b)) return values;
+  let numIndex = values.indexOf(b);
+  return values.slice(numIndex);
+}

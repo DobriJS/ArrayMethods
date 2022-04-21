@@ -8,3 +8,8 @@ function easyUnpack(values: any[]): any[] {
   // your code here
   return [values[0], values[2], values[values.length - 2]];
 }
+
+// Acceptable Password I
+function isAcceptablePassword(password: string): boolean {
+  return password.length > 6;
+}

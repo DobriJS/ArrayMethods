@@ -24,3 +24,12 @@ function endZeros(value: number): number {
   const str = String(value);
   return str.length - str.replace(/0*$/, '').length;
 }
+
+// Backward String
+function backwardString(value: string): string {
+  let reversed = '';
+  for (let i = value.length - 1; i >= 0; i--) {
+    reversed += value[i];
+  }
+  return reversed;
+}

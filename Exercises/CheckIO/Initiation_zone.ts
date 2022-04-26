@@ -46,3 +46,9 @@ function removeAllBefore(values: number[], b: number): number[] {
 function isAllUpper(text: string): boolean {
   return text === text.toUpperCase();
 }
+
+// Replace First
+function replaceFirst(values: number[]): number[] {
+  const [first, ...rest] = values;
+  return first ? [...rest, first] : [];
+}

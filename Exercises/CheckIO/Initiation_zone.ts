@@ -41,3 +41,8 @@ function removeAllBefore(values: number[], b: number): number[] {
   let numIndex = values.indexOf(b);
   return values.slice(numIndex);
 }
+
+// All Upper 1
+function isAllUpper(text: string): boolean {
+  return text === text.toUpperCase();
+}

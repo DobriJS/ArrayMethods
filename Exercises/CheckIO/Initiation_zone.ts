@@ -49,6 +49,7 @@ function isAllUpper(text: string): boolean {
 
 // Replace First
 function replaceFirst(values: number[]): number[] {
-  const [first, ...rest] = values;
-  return first ? [...rest, first] : [];
+  if (values.length <= 2) return values;
+  values.push(values.shift());
+  return values;
 }

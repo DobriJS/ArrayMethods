@@ -53,3 +53,11 @@ function replaceFirst(values: number[]): number[] {
   values.push(values.shift());
   return values;
 }
+
+// Max Digit
+function maxDigit(value: number): number {
+  let str: string = value.toString();
+  let words: string[] = str.split('');
+  let numsArr = words.map((i) => Number(i));
+  return Math.max(...numsArr);
+}
